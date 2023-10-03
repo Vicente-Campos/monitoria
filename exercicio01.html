@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function verdade(){
+            //Entrada dos números
+            var num1 = parseInt(prompt("Informe um número:"))
+            var num2 = parseInt(prompt("Informe outro número:"))
+
+            // Verfificando se o valor de num2 é igual a 0
+            if(num2 == 0){
+                while(num2 == 0){
+                    alert("VALOR INVÁLIDO")
+                    num2 = parseInt(prompt("Informe outro número:"))
+                }
+            }
+
+            //Realizando a divisão
+            var resultado = num1 / num2
+
+            //Saída
+            alert(`${num1} dividido por ${num2} é igual a ${resultado.toFixed(1)}`)
+        }
+
+
+        verdade()
+    </script>
+</body>
+</html>

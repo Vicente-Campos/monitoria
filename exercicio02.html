@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function trinagulo(valor1, valor2, valor3) {
+            if (valor1 == valor2 && valor1 == valor3) {
+                alert('EQUILÁTERO')
+            }
+            if (valor1 != valor2 && valor1 != valor3 && valor2 != valor3) {
+                alert('ESCALENO')
+            }
+            if((valor1 == valor2 && valor1 != valor3) || (valor1 == valor3 && valor1 != valor2) || (valor2 == valor3 && valor2 != valor1)){
+                alert('ISÓSCELES')
+            }
+        }
+
+        // Entradas dos valores
+        var lado1 = parseInt(prompt("Informe a medida do 1º lado do triângulo:"))
+        var lado2 = parseInt(prompt("Informe a medida do 2º lado do triângulo:"))
+        var lado3 = parseInt(prompt("Informe a medida do 3º lado do triângulo:"))
+
+        trinagulo(lado1,lado2,lado3)
+
+    </script>
+</body>
+
+</html>
