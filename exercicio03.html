@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function desconto(valor){
+            if(valor <= 500){
+                var desconto10 = valor-(valor*0.1)
+                var valor_desconto = valor - desconto10
+                alert(`O desconto aplicado será de 10%\nO valor do desconto é: R$${valor_desconto.toFixed(2)}\nO valor final a ser pago é: R$${desconto10.toFixed(2)}`)
+            }else{
+                var desconto15 = valor-(valor*0.15)
+                var valorDesconto = valor - desconto15
+                alert(`O desconto aplicado será de 15%\nO valor do desconto é: R$${valorDesconto.toFixed(2)}\nO valor final a ser pago é: R$${desconto15.toFixed(2)}`)
+            }
+        }
+
+        var valor_compra = Number(prompt("Informe o valor da sua compra:"))
+
+        desconto(valor_compra)
+    </script>
+</body>
+</html>

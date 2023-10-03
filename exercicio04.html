@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function totalPagar(){
+            var gasto = Number(prompt("Informe o total gasto:"))
+
+           var escolha = prompt("Escolha uma forma de pagamento:\n\nOpção 1: a vista com 10% de desconto\nOpção 2: em duas vezes (preço da etiqueta)\nOpção 3: de 3 até 10 vezes com 3% de juros ao mês (somente para compras acima de R$ 100,00).")
+
+           if(escolha == '3' && gasto <= 100){
+            alert(`A forma de pagamento não pode ser aplicada ao valor gasto.\nEscolha outra forma de pagamento`)
+            escolha = prompt("Escolha uma forma de pagamento:\n\nOpção 1: a vista com 10% de desconto\nOpção 2: em duas vezes (preço da etiqueta)")
+           }
+           if(escolha == '1'){
+            var pagamento1 = gasto-(gasto*0.1)
+            alert(`A forma de pagamento escolhida foi:\nA vista com 10% de desconto\nE o total a ser pago é: R$${pagamento1.toFixed(2)}`)
+           }
+           if(escolha == '2'){
+            var pagamento2 = gasto/2
+            alert(`A forma de pagamento escolhida foi:\nEm duas vezes (preço da etiqueta)\nE será pago em duas parcelas de: R$${pagamento2.toFixed(2)}`)
+           }
+           if(escolha == '3' && gasto > 100){
+            var parcelas = parseInt(prompt("Informe a quantidade de parcelas:\n(OBS: Mínimo de 3 e Máximo de 10)"))
+            while(parcelas < 3 || parcelas > 10){
+                alert('Número de parcelas inválido. Informe novamente')
+                parcelas = parseInt(prompt("Informe a quantidade de parcelas:\n(OBS: Mínimo de 3 e Máximo de 10)"))
+            }
+            var juros = 0.03
+            var calculo = gasto + (gasto * juros * parcelas)
+            var pagamento3 = calculo / parcelas
+            alert(`A forma de pagamento escolhida foi:\nDe 3 até 10 vezes com 3% de juros ao mês (somente para compras acima de R$ 100,00).\nE será pago em ${parcelas} parcelas de: R$${pagamento3.toFixed(2)}`)
+           }
+          
+        }
+
+
+        totalPagar()
+    </script>
+</body>
+
+</html>
