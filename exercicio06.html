@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        function ElementoDoVetor(vetor,valor) {
+
+            if (vetor.includes(valor)) {
+                alert(`Valor existe e está na posição ${vetor.indexOf(valor)}`)
+
+            } else {
+                alert(`Valor desejado não existe`)
+            }
+        }
+
+        var vetor = []
+        var entrada = parseInt(prompt("Informe um número: (-1 para encerrar)"))
+        while (entrada != -1) {
+            vetor.push(entrada)
+            entrada = parseInt(prompt("Informe outro número: (-1 para encerrar)"))
+        }
+        var valor = parseInt(prompt("Qual valor será pesquisado?"))
+
+        ElementoDoVetor(vetor,valor)
+    </script>
+</body>
+
+</html>

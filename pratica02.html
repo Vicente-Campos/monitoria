@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Docunent</title>
+</head>
+
+<body>
+    <h1 id=”titPrincipal”>Título</h1>
+    <label>Legenda</label>
+    <p id=”p1” style="color: green;">Olá!!</p>
+    <p>Estamos estudando DOM!!</p>
+    <label>Legenda 2</label>
+    <p id=”jv1”>JavaScript é uma linguagem poderosa!!</p>
+
+    <select name="estado" id="estado">
+        <option value="pe">PE</option>
+        <option value="al">AL</option>
+        <option value="rj">RJ</option>
+    </select>
+
+    <script>
+        var ParagrafosPagina = document.getElementsByTagName("p");
+
+        var textoP1 = ParagrafosPagina[0].innerHTML;
+        console.log(textoP1)
+        var textoP2 = ParagrafosPagina[1].innerHTML;
+        console.log(textoP2)
+        
+        ParagrafosPagina[0].style.color = "#0000CD";
+        ParagrafosPagina[1].style.color = "#0000CD";
+        ParagrafosPagina[2].style.color = "#0000CD";
+
+        var bt = document.createElement("button");
+        document.body.appendChild(bt);
+        bt.innerHTML = "Enviar"
+        
+        var opc = document.createElement("option");
+        var seuEstado = document.getElementById("estado");
+        seuEstado.appendChild(opc);
+        opc.innerHTML = "CE";
+        opc.value = "ce";
+    </script>
+</body>
+
+</html>

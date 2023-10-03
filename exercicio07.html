@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function distanciaPercorrida(velocidade, tempo, aceleraçao) {
+            var velocidadeInicial = velocidade - aceleraçao * tempo
+
+            var distancia = velocidadeInicial * tempo + aceleraçao * tempo ** 2
+
+            alert(`A distância percorrida é ${distancia} metros.`)
+        }
+
+        var aceleracao = Number(prompt("Informe a aceleração do veículo"))
+        var velocidadeF = Number(prompt("Informe a velocidade final do veículo:"))
+        var tempo = Number(prompt("Informe por quanto tempo este veículo esteve em movimento:"))
+
+        distanciaPercorrida(velocidadeF, tempo, aceleracao)
+
+    </script>
+</body>
+
+</html>
